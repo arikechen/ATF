@@ -8,7 +8,7 @@ AT.field（ATF）は、世界初のAIネイティブ「絶対領域」開発コ�
 
 ## スクリーンショット
 
-![AT.field スクリーンショット](assets/screenshots/01-three-column-preview.png)
+![AT.field スクリーンショット](01-app-eula-markdown-sidecar.png)
 
 ## AT.field を選ぶ理由
 
