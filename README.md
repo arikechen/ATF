@@ -16,7 +16,7 @@ Stop being blindfolded by oversimplified AI CLI tools (Claude Code, Antigravity 
 |---|----------|---------------------------|
 | **Engine** | 100% Native Swift / SwiftUI / AppKit | Chromium / Node.js (Web Wrapper) |
 | **Launch Time** | < 0.1s (cold start) | 1.5s ~ 4.0s |
-| **Size** | < 20 MB | 150 MB ~ 400 MB |
+| **Size** | 40~60 MB | 150 MB ~ 400 MB |
 | **GPU Rendering** | SwiftTerm (Core Graphics) | WebGL / Web Canvas |
 | **Security** | Apple Notarization, fully local | 3rd-party JS plugins, opaque audit |
 

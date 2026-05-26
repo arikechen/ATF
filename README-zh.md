@@ -16,7 +16,7 @@ AT.field（ATF）是全球首款 AI 原生「絕對領域」開發駕駛艙 — 
 |---|----------|-------------------|
 | **底層引擎** | 100% Native Swift / SwiftUI / AppKit | Chromium / Node.js（Web 封裝）|
 | **啟動時間** | < 0.1 秒（冷啟動） | 1.5 秒 ~ 4.0 秒 |
-| **安裝體積** | < 20 MB | 150 MB ~ 400 MB |
+| **安裝體積** | 40~60 MB | 150 MB ~ 400 MB |
 | **GPU 渲染** | SwiftTerm（Core Graphics） | WebGL / Web Canvas |
 | **安全性** | Apple Notarization 公證，完全本地運行 | 第三方 JS 插件，透明度低 |
 

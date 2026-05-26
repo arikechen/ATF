@@ -16,7 +16,7 @@ AT.field（ATF）は、世界初のAIネイティブ「絶対領域」開発コ�
 |---|----------|-------------------|
 | **エンジン** | 100% Native Swift / SwiftUI / AppKit | Chromium / Node.js（Webラッパー）|
 | **起動時間** | < 0.1秒（コールドスタート） | 1.5秒 ~ 4.0秒 |
-| **インストールサイズ** | < 20 MB | 150 MB ~ 400 MB |
+| **インストールサイズ** | 40~60 MB | 150 MB ~ 400 MB |
 | **GPUレンダリング** | SwiftTerm（Core Graphics） | WebGL / Web Canvas |
 | **セキュリティ** | Apple Notarization公証、完全ローカル実行 | サードパーティJSプラグイン、監査困難 |
 
