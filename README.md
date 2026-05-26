@@ -12,13 +12,15 @@ Stop being blindfolded by oversimplified AI CLI tools (Claude Code, Antigravity 
 
 ## Why AT.field?
 
-| | AT.field | Traditional Electron Tools |
-|---|----------|---------------------------|
-| **Engine** | 100% Native Swift / SwiftUI / AppKit | Chromium / Node.js (Web Wrapper) |
-| **Launch Time** | < 0.1s (cold start) | 1.5s ~ 4.0s |
+| | AT.field | Electron-based (VS Code, Cursor, Obsidian…) |
+|---|----------|----------------------------------------------|
+| **Platform** | macOS native only | Cross-platform (Chromium wrapper) |
+| **Engine** | 100% Swift / SwiftUI / AppKit | Chromium + Node.js |
+| **Launch** | < 0.1s (cold) | 1.5s ~ 4.0s |
 | **Size** | 40~60 MB | 150 MB ~ 400 MB |
-| **GPU Rendering** | SwiftTerm (Core Graphics) | WebGL / Web Canvas |
-| **Security** | Apple Notarization, fully local | 3rd-party JS plugins, opaque audit |
+| **Memory** | ~40-80 MB baseline | 200-500+ MB baseline |
+| **Render** | Core Graphics (native) | WebGL / Web Canvas |
+| **Security** | Apple Notarization, fully local | 3rd-party JS plugins |
 
 ## Features
 
@@ -77,7 +79,7 @@ Right-click "New AI Terminal Field Tab Here" and "New AI Terminal Field Window H
 
 ## Installation
 
-1. Download the latest `.dmg` from [Releases](https://github.com/USERNAME/REPO/releases/latest)
+1. Download the latest `.dmg` from [Releases](https://github.com/arikechen/ATF/releases)
 2. Open the `.dmg` and drag `ATF.app` into `Applications`
 3. On first launch, right-click → Open (to bypass Gatekeeper once)
 

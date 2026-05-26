@@ -12,13 +12,15 @@ AT.field（ATF）是全球首款 AI 原生「絕對領域」開發駕駛艙 — 
 
 ## 為什麼選擇 AT.field？
 
-| | AT.field | 傳統 Electron 工具 |
-|---|----------|-------------------|
-| **底層引擎** | 100% Native Swift / SwiftUI / AppKit | Chromium / Node.js（Web 封裝）|
-| **啟動時間** | < 0.1 秒（冷啟動） | 1.5 秒 ~ 4.0 秒 |
-| **安裝體積** | 40~60 MB | 150 MB ~ 400 MB |
-| **GPU 渲染** | SwiftTerm（Core Graphics） | WebGL / Web Canvas |
-| **安全性** | Apple Notarization 公證，完全本地運行 | 第三方 JS 插件，透明度低 |
+| | AT.field | Electron 系（VS Code、Cursor、Obsidian…）|
+|---|----------|----------------------------------------|
+| **平台** | macOS 原生限定 | 跨平台（Chromium 封裝）|
+| **底層引擎** | 100% Swift / SwiftUI / AppKit | Chromium + Node.js |
+| **啟動** | < 0.1 秒（冷啟動） | 1.5 秒 ~ 4.0 秒 |
+| **體積** | 40~60 MB | 150 MB ~ 400 MB |
+| **記憶體** | ~40-80 MB 基準 | 200-500+ MB 基準 |
+| **渲染** | Core Graphics（原生） | WebGL / Web Canvas |
+| **安全** | Apple Notarization 公證，完全本地端執行 | 第三方 JS 插件 |
 
 ## 功能特色
 
@@ -77,7 +79,7 @@ Finder 右鍵選單「New AI Terminal Field Tab Here」與「New AI Terminal Fie
 
 ## 安裝方式
 
-1. 從 [Releases](https://github.com/USERNAME/REPO/releases/latest) 下載最新 `.dmg`
+1. 從 [Releases](https://github.com/arikechen/ATF/releases) 下載最新 `.dmg`
 2. 開啟 `.dmg`，將 `ATF.app` 拖進 `Applications`
 3. 首次開啟請右鍵 → 打開（繞過 Gatekeeper 一次）
 
