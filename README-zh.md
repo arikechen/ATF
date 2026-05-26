@@ -8,7 +8,7 @@ AT.field（ATF）是全球首款 AI 原生「絕對領域」開發駕駛艙 — 
 
 ## 截圖
 
-![AT.field 截圖](assets/snapshot.png)
+![AT.field 截圖](assets/screenshots/01-three-column-preview.png)
 
 ## 為什麼選擇 AT.field？
 

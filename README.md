@@ -8,7 +8,7 @@ Stop being blindfolded by oversimplified AI CLI tools (Claude Code, Antigravity 
 
 ## Screenshot
 
-![AT.field Screenshot](assets/snapshot.png)
+![AT.field Screenshot](assets/screenshots/01-three-column-preview.png)
 
 ## Why AT.field?
 
