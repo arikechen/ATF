@@ -1,0 +1,73 @@
+AT.field
+Copyright (c) 2025 ATField. All rights reserved.
+
+---
+
+This software includes the following third-party components,
+each distributed under the MIT License:
+
+---
+
+SwiftTerm
+Copyright (m) 2016, the Swift Terminal contributors
+https://github.com/migueldeicaza/SwiftTerm
+
+CodeEditSourceEditor
+Copyright (c) CodeEdit contributors
+https://github.com/CodeEditApp/CodeEditSourceEditor
+
+CodeEditLanguages (Tree-sitter)
+Copyright (c) CodeEdit contributors
+https://github.com/CodeEditApp/CodeEditLanguages
+
+swift-argument-parser
+Copyright (c) Apple Inc. and its contributors
+https://github.com/apple/swift-argument-parser
+
+Swift Markdown (swift-cmark / MarkdownUI)
+Copyright (c) Apple Inc. and its contributors
+https://github.com/apple/swift-markdown
+
+mermaid.js
+Copyright (c) 2014-2024 Knut Sindre Dahl
+https://github.com/mermaid-js/mermaid
+
+NetworkImage
+Copyright (c) CodeEdit contributors
+https://github.com/CodeEditApp/
+
+SwiftCSV
+Copyright (c) nao1215 and its contributors
+https://github.com/swiftcsv/SwiftCSV
+
+SerialPort
+Copyright (c) 2014, Steve Trewitt
+https://github.com/cezheng/FlexiBERT (original SerialPort)
+
+NMSSH
+Copyright (c) 2013, Nine Muses AB
+https://github.com/NMSSH/NMSSH
+
+KeychainAccess
+Copyright (c) 2014 kishikawa katsumi
+https://github.com/kishikawakatsumi/KeychainAccess
+
+---
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
