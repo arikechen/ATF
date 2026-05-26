@@ -2,13 +2,13 @@
 
 > **Expand your AT.field. Visualize the Future of AI.**
 
-AT.field (ATF) is the world's first AI-native "absolute domain" development cockpit — a native macOS three-pane driver's seat built 100% with SwiftUI and AppKit. It fuses terminal, code editing, SSH/Serial connectivity, and an intelligent Sidecar preview engine into a single immersive workspace.
+AT.field (ATF) is a native macOS three-pane terminal cockpit with built-in visual Sidecar, SSH/Serial connectivity, and MCP Server for AI-assisted development. 100% SwiftUI + AppKit — no Electron.
 
 Stop being blindfolded by oversimplified AI CLI tools (Claude Code, Antigravity CLI, Codex). With AT.field's three-pane layout and visual Sidecar, you orchestrate AI agents directly from the terminal with a human-friendly visual audit layer on the side.
 
 ## Screenshot
 
-![AT.field Screenshot](01-three-column-preview.png)
+![AT.field Screenshot](assets/snapshot.png)
 
 ## Why AT.field?
 
