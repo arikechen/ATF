@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135pt" height="100pt" viewBox="0 0 135 100">
+<defs>
+<filter id="filter-remove-color" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+</filter>
+<filter id="filter-color-to-alpha" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"/>
+</filter>
+<image id="source-9" x="0" y="0" width="111" height="86" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABWCAAAAADk25fZAAAAAmJLR0QA/4ePzL8AAAOaSURBVGiB7ZpbSFRRFIbXGUfGS4I6msgo3cREiQi0i1ZoiFjmg08V2ZNpBfVQ5oMlYlKgZREFkRUIhRgEEWQXLYvKJMHMNMlEEE1FLSXzEs6Mrh7O3mcOeo6SrX0E8X/Z/6w1sz9nn311jwQuBdt8LW5AK3RMDHZPuF5LrAw5kBTtS8xSmB1vHz9xqiPr7k+hWPUdV7Xc4XHBNETE+lCOyzOAhoi9a2XcfmNwiG3eAG4QUOUhqJ/MVIBnFQBcMurrIU6GgGTp8+f86srmYTvxd5J8QuLSg/irgnOQzOGdW4hRijxKOOMzQDGzP0Ln/+CCdYEDrVDNXCZh9R4J++It6oBbB6PsgnbZjFn0PvzPMuf/RsSRPPVUnMN4GTAim5dkOPdnrO5KsysYw2K5Ji850EXGK0xmJiXfFeTVe5nYHzFChfM7qdhsH8X+YqXZxMw0FS/R1RG84hXLq5dMQKwQlbfNTpPzhlR+2ADea1Ts1BsDeN8rFFs2YAAPTrQz03RKI0vPG459BAAwXbZzVCNr1oj9p4bSohKtPc+7NZMCeACtrbop+vacW0bzJDZckGxC0xZbnIr585OoDw46WurPb5lHK94/r+SIxUzO4Akef0rti9WelDKlJgX1V1dqtxjbiJbQ4cKbEBGxMUwVMzNMEX17rq7dCAAAm2q1TkD0vNJAZoJuGMFbn6TYvWsM4MWpfKwBPB+VX2EAr1PHi+LVuE5aP43YX48XKPbM5Ow0/Xi4WspM0W2NrID582j6VwD4kJKrlRQxf5aX26w9GmcxUTyA3l69zGKtR8HbhGKU3a2Ec72NXMVLfX+2zKMVHw99dP+w05K0dQav4rRQntnBzBJ5frrViuBF3Rt0DtyN1E7S76+zHIiIaM9QxQTur1Nvyn3Q/dZujSw5z3ydX2GarmlUTs7bsUqxYRo3NuS8SB0vijel8honQHJek8p/0ueR7Zvqvyi2wcV2ZyWa2IWfPxAJj/ArxIksV9SPlXbTmGx0ZoMFqC5NPkH0J6uaM4qVY9AiD3znSjIgBBbWfavJVh/M4DKbXw7CQ+Yu0vFmy8pu4XAznGXOuUcczvKCQeyeEM2vOh0Fon4/sf0jZ7wCSWoL5/GJ9y0C7qdtcQoAMu8AHEPD1O8NAO4thvHkFXHDqEG4B6xVE0bmfy+Bniq/04hsEE9znFfdOLgdahRLGy9jnZQv/hCRFBNh87WQr0+OPwNdze9q+N3cX6YQyuPFgDplAAAAAElFTkSuQmCC"/>
+<mask id="mask-0">
+<g filter="url(#filter-remove-color)">
+<use xlink:href="#source-9" filter="url(#filter-color-to-alpha)" transform="matrix(1, 0, 0, 1, 0, 0.000000000000014211)"/>
+</g>
+</mask>
+<image id="source-8" x="0" y="0" width="111" height="86" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABWCAIAAABO0l9SAAAABmJLR0QA/wD/AP+gvaeTAAAAM0lEQVR4nO3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICHAXA0AAFuYaQrAAAAAElFTkSuQmCC"/>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 0 L 111 0 L 111 86 L 0 86 Z M 0 0 "/>
+</clipPath>
+<clipPath id="clip-1">
+<rect x="0" y="0" width="111" height="86"/>
+</clipPath>
+<g id="source-12" clip-path="url(#clip-1)">
+<g mask="url(#mask-0)">
+<use xlink:href="#source-8" transform="matrix(1, 0, 0, 1, 0, 0.000000000000014211)"/>
+</g>
+<g clip-path="url(#clip-0)">
+<rect x="-61.14" y="-43.4" width="233.28" height="172.8" fill="rgb(0%, 0%, 0%)" fill-opacity="1"/>
+</g>
+</g>
+<clipPath id="clip-2">
+<rect x="0" y="0" width="111" height="86"/>
+</clipPath>
+<g id="source-14" clip-path="url(#clip-2)">
+<use xlink:href="#source-12"/>
+</g>
+</defs>
+<use xlink:href="#source-14" transform="matrix(1, 0, 0, 1, 12, 7)"/>
+</svg>

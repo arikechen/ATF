@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135pt" height="100pt" viewBox="0 0 135 100">
+<defs>
+<filter id="filter-remove-color" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+</filter>
+<filter id="filter-color-to-alpha" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"/>
+</filter>
+<image id="source-9" x="0" y="0" width="111" height="86" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABWCAAAAADk25fZAAAAAmJLR0QA/4ePzL8AAANRSURBVGiB7ZrfS1RBFMe/d7Rsw7DNfpioiZgQ0g9UJAXNilZSKvMlkwgMBQkqH6KnskyIIKMeor+g6M2yLEs2M9KXUlJCrZdC01TaNUrd1t3c28Od2Z1J29XbnQXjnpdzzpy757N37pnZ4Z5VIErExvhoSwSMEY/LOTglDimcHVNoy0qPNIjFZOS1vWlkvkD2XbcqR3yPds2hbWqUBNPkQYKIK/8uFaeqjkIed0EyTVVVb1kAd04+TlW9exmu2BcOnuqMA6AAsf3r/Xfqbuvo/zI9u7iSL7sEAHBliMNKlDU505YWGLhfCgC46f8GE3WxiyNpUq19emreYEFr4A5zASBuhrntG/TQQvCA8mkGeAwAtcy7p3drCcHDjh+UMJsI4AN1ui06cSF5KGEFWQOkUdO3VS8uNA93KKQVJI8OPXynmxdarqia3qmQLDp0SyIO/W2aXpVK6PpwvZTJQwvVqSRJM3q9UnldVCeQtZrxSSoOH6mOJXQVTMjlsfQrIqM0Y8a43MVn1vhtR4NdSB9l9HEFKGzmvX35nbyrEMN5lYJHKsSo8bzRoK7xvMsDvNd7TYwa//wcGUWBevna4pHNg7sxSND4+QwuJm9p8yTU58FTq/2288Yz2bziJt6z7RZ/yI2fzxOCpxwXo8bzPovusGxevbB/9jSIUeOfn5PfPx1PzP3T5C0hnoT6LKqx+m3Hdbtsnq2ZfydnE8+fEuaziseF4fw5FtQ1nlfXx3tvw3D+3MPVy4tfsnnwPA0S/N/Xu8kzeSbP5Jm8JcKjb5aV4Jf9q7D0PuLWDN3NgIUJS+8mLs3Q2VpZqLD0LkLf36X99VJDhKUfJ0OasSVGKi+H6mFCT28RB6TySqgeIG+odVZmhe5P1/ToGGn3aeb2Unk4cpEa7QBesXZnit50IftVV1nL7xiACub0JUvinWaEyWgAlnF/Q/eQDJ6VNeNU9TYA4GSgwdp1RM+yCMJT0hsm/dndiYACRHZmBy7w9fQsuj+dcxgA4Dn/ByvKmpK7jhuor9V06jc1HNK9jIHzf4YBN8L9ZSNvQjpucDM/1ykdknH2OPHhksphibTxqrnniOVH7R45tK7qlYGi5ZExBZnbkuKjLUYdarwu59D718+HuKHfEbH8hON6d1sAAAAASUVORK5CYII="/>
+<mask id="mask-0">
+<g filter="url(#filter-remove-color)">
+<use xlink:href="#source-9" filter="url(#filter-color-to-alpha)" transform="matrix(1, 0, 0, 1, 0, 0.000000000000014211)"/>
+</g>
+</mask>
+<image id="source-8" x="0" y="0" width="111" height="86" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABWCAIAAABO0l9SAAAABmJLR0QA/wD/AP+gvaeTAAAAM0lEQVR4nO3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICHAXA0AAFuYaQrAAAAAElFTkSuQmCC"/>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 0 L 111 0 L 111 86 L 0 86 Z M 0 0 "/>
+</clipPath>
+<clipPath id="clip-1">
+<rect x="0" y="0" width="111" height="86"/>
+</clipPath>
+<g id="source-12" clip-path="url(#clip-1)">
+<g mask="url(#mask-0)">
+<use xlink:href="#source-8" transform="matrix(1, 0, 0, 1, 0, 0.000000000000014211)"/>
+</g>
+<g clip-path="url(#clip-0)">
+<rect x="-61.14" y="-43.4" width="233.28" height="172.8" fill="rgb(0%, 0%, 0%)" fill-opacity="1"/>
+</g>
+</g>
+<clipPath id="clip-2">
+<rect x="0" y="0" width="111" height="86"/>
+</clipPath>
+<g id="source-14" clip-path="url(#clip-2)">
+<use xlink:href="#source-12"/>
+</g>
+</defs>
+<use xlink:href="#source-14" transform="matrix(1, 0, 0, 1, 12, 7)"/>
+</svg>

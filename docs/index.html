@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AT.field - Ai Terminal Field | macOS AI Terminal Cockpit</title>
+  <meta name="description" content="AT.field 是原生 macOS AI 終端控制台，整合 Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview 與 AI Agent 工作流。">
+  <meta name="keywords" content="AT.field, Ai Terminal Field, macOS AI terminal, Claude Code terminal, Codex CLI GUI, Gemini CLI, aider, AI CLI cockpit, SSH manager, Serial port terminal, UART console, localhost preview, Git diff viewer, MCP server, SwiftUI, AppKit">
+  <meta name="author" content="AT.field Team">
+  
+  <!-- SEO & Open Graph -->
+  <meta property="og:title" content="AT.field - Ai Terminal Field | macOS AI Terminal Cockpit">
+  <meta property="og:description" content="在同一個 macOS 原生視窗裡使用 terminal、AI CLI、SSH、Serial、Git diff 與 localhost preview。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://atfield.dev/assets/og-image.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AT.field - Ai Terminal Field | macOS AI Terminal Cockpit">
+  <meta name="twitter:description" content="在同一個 macOS 原生視窗裡使用 terminal、AI CLI、SSH、Serial、Git diff 與 localhost preview。">
+  <meta name="twitter:image" content="https://atfield.dev/assets/og-image.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="site-header">
+    <div class="nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        <span class="logo-dot"></span>
+        AT.field
+      </a>
+      
+      <button class="menu-toggle" id="mobile-menu-btn" data-i18n-attr="aria-label:nav.menu_aria">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links-container">
+        <a href="#features" class="nav-link" data-i18n="nav.features">產品特色</a>
+        <a href="#showcase-sec" class="nav-link" data-i18n="nav.showcase">功能展示</a>
+        <a href="#specs" class="nav-link" data-i18n="nav.specs">技術規格</a>
+        <a href="https://github.com/arikechen/ATF" target="_blank" rel="noopener noreferrer" class="nav-link github-link" data-i18n="nav.github">
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          GitHub
+        </a>
+        <div class="lang-switcher">
+          <button class="lang-btn" id="lang-btn">Language</button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button data-lang="zh-Hant" data-i18n="lang.zh-Hant">繁中</button>
+            <button data-lang="zh-Hans" data-i18n="lang.zh-Hans">简中</button>
+            <button data-lang="en" data-i18n="lang.en">English</button>
+            <button data-lang="ja" data-i18n="lang.ja">日本語</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge" data-i18n="hero.badge">Native macOS AI Terminal Cockpit</div>
+        <h1 class="hero-title" data-i18n="hero.title">Expand your <span class="gradient-text">AT.field</span>.<br>Visualize the Future of AI.</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          AT.field 是原生 macOS AI 終端控制台，整合 Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview 與 AI Agent 工作流。當 AI 在終端裡改檔案、產生報告或啟動網頁時，你可以直接在右側 Sidecar 查看結果，不用一直切換 Finder、瀏覽器、Preview 或 VS Code。
+        </p>
+        <div class="hero-actions-container" style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; margin-bottom: 4rem;">
+          <div class="hero-actions" style="margin-bottom: 0;">
+            <a href="https://github.com/arikechen/ATF/releases/latest" target="_blank" rel="noopener noreferrer" class="cta-button primary-cta" id="hero-download-btn" data-i18n="hero.download_btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle;">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.62.69-1.16 1.84-1.01 2.96 1.12.09 2.27-.56 2.95-1.39z"/>
+              </svg>
+              下載 macOS 版 (DMG)
+            </a>
+            <a href="#showcase-sec" class="cta-button secondary-cta" id="hero-demo-btn" data-i18n="hero.demo_btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              查看功能展示
+            </a>
+          </div>
+          <span class="hero-download-subtext" style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="hero.download_subtext">
+            支援 macOS 14.0+ &nbsp;|&nbsp; 適用於 Apple Silicon (M1/M2/M3/M4) 與 Intel 晶片
+          </span>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">&lt; 0.1s</span>
+            <span class="stat-label" data-i18n="hero.stat_startup">極速啟動</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">&lt; 20MB</span>
+            <span class="stat-label" data-i18n="hero.stat_size">輕量體積</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label" data-i18n="hero.stat_native">Swift 原生</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Feature Showcase (auto-advancing carousel of real screenshots) -->
+  <section class="feature-showcase" id="showcase-sec">
+    <div class="showcase-sticky-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="showcase.title">一個地方處理所有 terminal 工作</h2>
+          <p class="section-desc" data-i18n="showcase.desc">真實 App 截圖展示 Sidecar 預覽、Git diff、localhost、SSH、Serial、split terminal 與浮動視窗。</p>
+        </div>
+
+        <div class="showcase-carousel" id="showcase">
+          <!-- 說明（放在圖片上方，不遮住截圖）-->
+          <div class="showcase-captions">
+            <div class="showcase-caption-card active" data-i="0">
+              <span class="showcase-tag" data-i18n="showcase.1.tag">01 · 三欄駕駛艙</span>
+              <h3 data-i18n="showcase.1.title">Navigator · Core · Sidecar，開發盡在一窗</h3>
+              <p data-i18n="showcase.1.desc">左側 Files 導覽器快速瀏覽專案、中央 Core 執行指令、右側 Sidecar 即時渲染 Markdown 文件。三欄同時運作，終端與預覽不再分離。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="1">
+              <span class="showcase-tag" data-i18n="showcase.2.tag">02 · Sidecar 雙模式</span>
+              <h3 data-i18n="showcase.2.title">Preview ↔ Edit 一鍵切換</h3>
+              <p data-i18n="showcase.2.desc">右側 Sidecar 支援 Preview（Markdown 即時渲染）與 Edit（原始碼直接編輯）雙模式。選取檔案立刻看、立刻改，不需要另開編輯器。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="2">
+              <span class="showcase-tag" data-i18n="showcase.3.tag">03 · 專案總覽 &amp; Git</span>
+              <h3 data-i18n="showcase.3.title">完整專案樹＋Git Diff 直進 Sidecar</h3>
+              <p data-i18n="showcase.3.desc">左側導覽器展開多層專案結構（ATF / atf-mcp / website / scripts），git diff 結果直接送進右側 Sidecar 渲染成帶顏色的 diff 預覽，不用切換 Source Control app。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="3">
+              <span class="showcase-tag" data-i18n="showcase.4.tag">04 · WebKit Sidecar</span>
+              <h3 data-i18n="showcase.4.title">localhost 一鍵進 Sidecar 瀏覽器</h3>
+              <p data-i18n="showcase.4.desc">終端機偵測到 URL 後，一鍵在右側 WebKit 沙箱開啟。npm run dev、vite、任何 HTTP 服務啟動後即可預覽，改一行、看一次，雙手不離鍵盤。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="4">
+              <span class="showcase-tag" data-i18n="showcase.5.tag">05 · SSH &amp; Serial</span>
+              <h3 data-i18n="showcase.5.title">SSH &amp; Serial，統一連線中心</h3>
+              <p data-i18n="showcase.5.desc">把 SSH host 與 Serial device（/dev/tty.*）當成同一級 session 管理。切換 tab 不會中斷背景連線，適合 embedded、robotics、homelab 與 infra 工作。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="5">
+              <span class="showcase-tag" data-i18n="showcase.6.tag">06 · Split Terminal</span>
+              <h3 data-i18n="showcase.6.title">一個 Tab，多個終端並排</h3>
+              <p data-i18n="showcase.6.desc">⌘D 即可水平分割終端機，每個 pane 獨立 PTY session。對照多台機器輸出或並排執行不同指令，都不需要另開視窗。</p>
+            </div>
+            <div class="showcase-caption-card" data-i="6">
+              <span class="showcase-tag" data-i18n="showcase.7.tag">07 · Detach &amp; Pin</span>
+              <h3 data-i18n="showcase.7.title">Tab 獨立成浮動視窗，釘在最上層</h3>
+              <p data-i18n="showcase.7.desc">把任意 Tab 拖出主視窗，成為獨立浮動的終端機視窗。右上角圖釘可釘在所有 Space 最上層，SSH 連線或長跑腳本永遠不被其他視窗遮擋。</p>
+            </div>
+          </div>
+
+          <!-- 截圖 -->
+          <div class="showcase-frame">
+            <div class="showcase-slide active" data-i="0"><img src="assets/snapshot.png" data-i18n-attr="alt:showcase.img_alt.1" alt="三欄駕駛艙標準視圖" loading="lazy"></div>
+            <div class="showcase-slide" data-i="1"><img src="assets/screenshots/code_edit.png" data-i18n-attr="alt:showcase.img_alt.2" alt="Sidecar Edit 模式編輯檔案" loading="lazy"></div>
+            <div class="showcase-slide" data-i="2"><img src="assets/screenshots/git_diff.png" data-i18n-attr="alt:showcase.img_alt.3" alt="完整專案樹與 Git Diff 預覽" loading="lazy"></div>
+            <div class="showcase-slide" data-i="3"><img src="assets/screenshots/browser.png" data-i18n-attr="alt:showcase.img_alt.4" alt="WebKit Sidecar 開啟 localhost" loading="lazy"></div>
+            <div class="showcase-slide" data-i="4"><img src="assets/screenshots/ssh.png" data-i18n-attr="alt:showcase.img_alt.5" alt="SSH & Serial 連線管理" loading="lazy"></div>
+            <div class="showcase-slide" data-i="5"><img src="assets/screenshots/terminal.png" data-i18n-attr="alt:showcase.img_alt.6" alt="Split Terminal Panes" loading="lazy"></div>
+            <div class="showcase-slide" data-i="6"><img src="assets/screenshots/top_windows.png" data-i18n-attr="alt:showcase.img_alt.7" alt="Detach 獨立浮動視窗並釘在最上層" loading="lazy"></div>
+
+            <button class="showcase-arrow prev" onclick="showcaseStep(-1)" data-i18n-attr="aria-label:showcase.prev_aria" aria-label="上一張">‹</button>
+            <button class="showcase-arrow next" onclick="showcaseStep(1)" data-i18n-attr="aria-label:showcase.next_aria" aria-label="下一張">›</button>
+          </div>
+
+          <div class="showcase-progress" id="showcase-progress"><span></span></div>
+
+          <div class="showcase-dots" id="showcase-dots">
+            <button class="showcase-dot active" onclick="showcaseGo(0)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 1 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(1)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 2 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(2)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 3 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(3)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 4 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(4)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 5 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(5)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 6 張"></button>
+            <button class="showcase-dot" onclick="showcaseGo(6)" data-i18n-attr="aria-label:showcase.dot_aria" aria-label="第 7 張"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="features.title">核心功能</h2>
+        <p class="section-desc" data-i18n="features.desc">保留 terminal-first 工作流，加入檔案預覽、diff 審查、localhost 預覽、SSH / Serial 管理與 MCP automation。</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper cyan">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.1.title">三欄式控制台</h3>
+          <p class="feature-text" data-i18n="features.1.desc">Navigator、terminal、Sidecar 在同一個視窗中協作。左側管理檔案與連線，中間執行指令，右側查看結果。</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper magenta">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.2.title">Sidecar 預覽 / 編輯</h3>
+          <p class="feature-text" data-i18n="features.2.desc">預覽 Markdown、圖片、影片、HTML、JSON、PDF，也能編輯原始碼並支援語法高亮。</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper orange">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.3.title">SSH & Serial 中心</h3>
+          <p class="feature-text" data-i18n="features.3.desc">將 SSH host 與 Serial device（/dev/tty.*）當成同一級 session 管理，切換 tab 不會中斷背景連線。</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper green">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.4.title">終端輸出偵測</h3>
+          <p class="feature-text" data-i18n="features.4.desc">從 terminal output 偵測檔案路徑、localhost URL、圖片、PDF、HTML、diff，並直接在 Sidecar 開啟。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications -->
+  <section class="specs-sec" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="specs.title">macOS 原生技術規格</h2>
+        <p class="section-desc" data-i18n="specs.desc">AT.field 使用 SwiftUI + AppKit 建構，保留 macOS 原生體驗，避免 Electron 工具常見的資源負擔。</p>
+      </div>
+
+      <div class="specs-table-wrapper">
+        <table class="specs-table" id="specs-data-table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="specs.col1">指標項目</th>
+              <th scope="col" data-i18n="specs.col2">AT.field 技術規格</th>
+              <th scope="col" data-i18n="specs.col3">傳統 Electron 工具</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="specs.row1.name"><strong>應用程式底層</strong></td>
+              <td data-i18n="specs.row1.atf">100% Native Swift / SwiftUI / AppKit</td>
+              <td data-i18n="specs.row1.electron">Chromium / Node.js (Web Wrapper)</td>
+            </tr>
+            <tr>
+              <td data-i18n="specs.row2.name"><strong>啟動時間</strong></td>
+              <td data-i18n="specs.row2.atf">&lt; 0.1 秒 (冷啟動)</td>
+              <td data-i18n="specs.row2.electron">1.5 秒 ~ 4.0 秒</td>
+            </tr>
+            <tr>
+              <td data-i18n="specs.row3.name"><strong>記憶體</strong></td>
+              <td data-i18n="specs.row3.atf">~80-100 MB 基準</td>
+              <td data-i18n="specs.row3.electron">200-500+ MB 基準</td>
+            </tr>
+            <tr>
+              <td data-i18n="specs.row4.name"><strong>GPU 加速渲染</strong></td>
+              <td data-i18n="specs.row4.atf">SwiftTerm (Metal API 渲染)</td>
+              <td data-i18n="specs.row4.electron">WebGL / Web Canvas 渲染</td>
+            </tr>
+            <tr>
+              <td data-i18n="specs.row5.name"><strong>安全性與權限</strong></td>
+              <td data-i18n="specs.row5.atf">Apple Notarization 公證安全，完全本地運行</td>
+              <td data-i18n="specs.row5.electron">各類第三方 Javascript 插件，安全性難以審核</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <div class="footer-logo">AT.field</div>
+        <p class="footer-motto" data-i18n="footer.motto">Expand your AT.field. Visualize the Future of AI.</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 AT.field. All rights reserved. macOS, Swift, and SwiftUI are trademarks of Apple Inc.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-link-group">
+          <h5 data-i18n="footer.legal_title">合約條款</h5>
+          <a href="#" data-i18n="footer.legal.eula">使用者授權合約 (EULA)</a>
+          <a href="#" data-i18n="footer.legal.privacy">隱私權保護政策 (Privacy)</a>
+          <a href="#" data-i18n="footer.legal.refund">退款條款</a>
+        </div>
+        <div class="footer-link-group">
+          <h5 data-i18n="footer.social_title">社群連結</h5>
+          <a href="https://github.com/arikechen/ATF" target="_blank" rel="noopener noreferrer" data-i18n="footer.social.github">GitHub 專案</a>
+          <a href="#" data-i18n="footer.social.discord">Discord 社群</a>
+          <a href="#" data-i18n="footer.social.twitter">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

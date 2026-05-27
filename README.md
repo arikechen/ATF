@@ -12,32 +12,32 @@ It's not a traditional terminal. It's not another Electron IDE.
 
 ![AT.field macOS AI terminal cockpit with Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
 
-Many engineers are already using **Claude Code, Codex CLI, aider, OpenHands, Antigravity, Gemini CLI** — but they all face the same problem.
+Many engineers are already using **Claude Code, Codex CLI, aider, OpenHands, Antigravity, Gemini CLI** — but they all share one problem.
 
-The core idea is simple:
+Here's the core idea:
 
-- **AI CLI (Claude Code, Codex, Antigravity CLI)** does the executing
+- **AI CLI (Claude Code, Codex, Antigravity CLI)** runs the execution
 - **Humans** supervise and review through a visual Sidecar layer
 - **Three-pane interface** manages everything at once: file navigation, main terminal, AI result visualization
 
-It solves the biggest pain point of AI CLI tools today: **the CLI is too "blind."**
+This is the answer to the biggest pain point in AI CLI tools today: **the CLI is too "blind."**
 
-AI is powerful, but you can only watch scrolling text. You can't quickly:
+AI is powerful, but you're stuck watching scrolling text. You can't quickly:
 
 - See diffs
 - Render Markdown
 - Open localhost web pages
-- View images / PDFs
+- View images or PDFs
 - Check git changes
 - Monitor remote device status
 
-AT.field's answer: **keep the terminal-first workflow, but add a visual Sidecar alongside it.**
+AT.field's take: **keep the terminal-first workflow, but add a visual Sidecar right next to it.**
 
-## Why pure CLI workflows are not enough
+## Why pure CLI workflows fall short
 
-AI CLI tools are excellent for running commands, editing files, launching services, and executing tests. Their limitation is simple: **they are mostly text interfaces.**
+AI CLI tools are great at running commands, editing files, launching services, and executing tests. Their one real limitation: **they're mostly text interfaces.**
 
-When Claude Code, Codex CLI, or another agent tells you it updated a file, generated a report, started a localhost service, or produced a diff, you usually cannot review the result comfortably inside the CLI itself.
+When Claude Code, Codex CLI, or another agent tells you it updated a file, generated a report, started a localhost service, or produced a diff, you usually can't review the result comfortably inside the CLI.
 
 For example:
 
@@ -48,68 +48,66 @@ For example:
 - The agent creates an image or PDF
 - The agent asks you to review git changes
 
-In a pure terminal workflow, you often need extra steps:
+In a pure terminal setup, that means extra steps:
 
 - Open files with `cat`, `less`, `vim`, or `nano`
-- Use `!` or shell commands to call external tools
-- Switch to Finder to locate files
+- Call external tools with `!` or shell commands
+- Switch to Finder to find files
 - Switch to a browser for localhost
-- Switch to VS Code / Cursor for diffs
+- Switch to VS Code or Cursor for diffs
 - Switch to Preview for images or PDFs
 - Switch back to the terminal to continue the AI conversation
 
-None of these steps are hard, but they constantly interrupt the workflow.
+None of these are hard on their own. But together they break your flow, over and over.
 
-The problem is not that AI CLI tools cannot do the work. The problem is that **after the AI does the work, humans need a better place to inspect, verify, and correct the result.**
+The real problem isn't that AI CLI tools can't do the work. It's that **after the AI does the work, you don't have a good place to inspect, verify, and correct the result.**
 
-AT.field adds that layer. When the terminal outputs file paths, localhost URLs, Markdown, images, PDFs, HTML, or diffs, AT.field can open them directly in the right-side Sidecar. You do not need to leave the terminal or keep jumping between Finder, browser, Preview, and VS Code.
+AT.field adds that place. When the terminal outputs file paths, localhost URLs, Markdown, images, PDFs, HTML, or diffs, AT.field opens them directly in the right-side Sidecar. No jumping between Finder, browser, Preview, and VS Code. You stay in one window.
 
-This turns AI CLI from a text-only black box into a workflow you can observe and review in real time.
+This turns AI CLI from a text-only black box into a workflow you can observe and steer in real time.
 
-## One place for all terminal work
+## One place for all your terminal work
 
-AT.field is not only for running AI CLI tools. Its goal is to bring the surrounding terminal work engineers do every day into one workspace:
+AT.field isn't just for AI CLI tools. It brings everything engineers do around the terminal into a single workspace:
 
 - Local shell
-- AI CLI / coding agents
+- AI CLI and coding agents
 - SSH remote hosts
-- Serial port / UART devices
+- Serial port and UART devices
 - Localhost web preview
-- Markdown / PDF / image / HTML preview
+- Markdown, PDF, image, and HTML preview
 - Git diff and file change review
 - Long-running scripts, servers, and log tails
-- MCP / automation integration
+- MCP and automation integration
 
-Usually these jobs are scattered across iTerm2, Finder, VS Code, browser, Preview, SSH config, serial console tools, and git GUIs.
+Usually these are scattered across half a dozen apps: iTerm2, Finder, VS Code, Safari, Preview, SSH config files, serial console tools, git GUIs.
 
-AT.field puts them back into one three-pane interface:
+AT.field pulls them all into one three-pane interface:
 
-- Left: projects, files, connections, and sessions
-- Center: terminal, AI CLI, SSH, and Serial
-- Right: output previews, file contents, diffs, localhost pages, and media files
+- **Left** — projects, files, connections, and sessions
+- **Center** — terminal, AI CLI, SSH, and Serial
+- **Right** — output previews, file contents, diffs, localhost pages, and media files
 
-You can run commands, connect to remote machines, inspect AI changes, check localhost, review git diffs, open Markdown reports, and monitor serial logs in the same window.
+Run commands, connect to remote machines, inspect AI changes, check localhost, review diffs, open Markdown reports, and monitor serial logs — all in the same window.
 
 ## SSH and Serial as first-class workflows
 
-Many terminal apps treat SSH as a core feature, but Serial ports are often left to external tools. For embedded, robotics, homelab, and infrastructure work, that is not enough.
+Most terminal apps make SSH a core feature. Serial ports are usually an afterthought. For embedded, robotics, homelab, and infrastructure engineers, that doesn't cut it.
 
-In real projects, you may need to:
+Real work often means juggling:
 
 - SSH into a remote Linux server
-- Connect to a Raspberry Pi, Jetson, router, NAS, or dev board
-- Watch UART / serial console output through `/dev/tty.*`
-- Tail logs while running a local build
-- Let an AI CLI modify code while you test on a remote machine
-- Drag files into local, SSH, or Serial sessions
+- Connecting to a Raspberry Pi, Jetson, router, NAS, or dev board
+- Watching UART or serial console output via `/dev/tty.*`
+- Tailing logs while running a local build
+- Letting an AI CLI modify code while you test on a remote machine
+- Dragging files into local, SSH, or Serial sessions
 
-AT.field treats SSH and Serial as first-class sessions.
+AT.field treats SSH and Serial as equal citizens — both are first-class sessions managed in the same connection hub. Switch tabs freely; background connections stay alive. Need to keep an eye on a long-running deploy or hardware console? Detach any session into a floating window and pin it above all Spaces.
 
-You can manage SSH hosts and Serial devices in the same connection hub. Switching tabs does not drop background connections. You can also detach a session into a floating window and pin it above all Spaces, so long-running logs, deployments, tests, and hardware consoles stay visible.
+That's what makes AT.field more than an AI coding tool: it's a terminal cockpit for day-to-day engineering ops.
 
-This makes AT.field not only an AI coding tool, but also a terminal cockpit for day-to-day engineering operations.
-
-### How it differs from Cursor / VS Code
+### How it differs from Cursor and VS Code
 
 | | AT.field | Cursor / VS Code |
 |---|----------|------------------|
@@ -127,31 +125,31 @@ Think of it more like:
 
 **iTerm2 + tmux + Preview + SSH Manager + MCP Gateway + AI Agent Inspector** — fused into one macOS-native product.
 
-## The Real Core: Sidecar Design
+## The real core: Sidecar design
 
-This is the smartest part of the entire product.
+This is the smartest part of the whole product.
 
-When the terminal outputs `./report.md` or `http://localhost:3000`, AT.field automatically recognizes file paths, localhost URLs, images, PDFs, HTML, and diffs — then previews them in the right-side Sidecar instantly.
+When your terminal outputs `./report.md` or `http://localhost:3000`, AT.field recognizes file paths, localhost URLs, images, PDFs, HTML, and diffs — then previews them instantly in the right-side Sidecar.
 
-You never need to:
+No more:
 
 - `Cmd+Tab` to browser
-- Open Finder
-- Launch VS Code
+- Opening Finder
+- Launching VS Code
 
-The terminal becomes your **command layer** and **orchestration layer** — the Sidecar becomes your **visualization layer**.
+The terminal becomes your **command layer** and **orchestration layer**. The Sidecar becomes your **visualization layer**.
 
-This fits perfectly with the AI Agent era: AI executes in the terminal, humans supervise, authorize, and correct through the visual layer. What's dangerous is AI changing things without an observation layer — AT.field gives you that layer.
+This fits the AI Agent era perfectly: the AI executes in the terminal, and you supervise, authorize, and correct through the visual layer. The real risk is AI changing things without an observation layer — AT.field gives you that layer.
 
 ## Features
 
 | Feature | What it does |
 |---|---|
-| **Three-pane cockpit** | Navigator, terminal, and Sidecar stay in one window. |
-| **Sidecar preview / edit** | Preview Markdown, images, video, HTML, JSON, PDF, and edit source files with syntax highlighting. |
+| **Three-pane cockpit** | Navigator, terminal, and Sidecar in one window. |
+| **Sidecar preview / edit** | Preview Markdown, images, video, HTML, JSON, PDF. Edit source files with syntax highlighting. |
 | **Terminal output detection** | Detect file paths, localhost URLs, images, PDFs, HTML, and diffs from terminal output and open them in Sidecar. |
-| **SSH & Serial hub** | Manage SSH hosts and Serial devices (`/dev/tty.*`) as first-class sessions without dropping background connections. |
-| **Split / detach / pin** | Split terminal panes, detach tabs, and pin floating sessions above all Spaces. |
+| **SSH & Serial hub** | Manage SSH hosts and Serial devices (`/dev/tty.*`) as first-class sessions. Switching tabs won't drop connections. |
+| **Split / detach / pin** | Split terminal panes, detach tabs, and pin floating windows above all Spaces. |
 | **Git integration** | View project files and git diffs directly in Sidecar. |
 | **MCP Server** | Built-in Unix Domain Socket JSON-RPC server for AI clients and automation. |
 | **Finder Services** | Open AT.field tabs or windows from Finder context menus. |
