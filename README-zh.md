@@ -10,6 +10,10 @@
 
 關鍵字：macOS AI 終端機、Claude Code 終端控制台、Codex CLI 圖形介面、AI CLI 工作流、SSH 管理、Serial port 終端、UART console、localhost 預覽、Git diff 檢視、MCP Server、AI Agent workflow。
 
+## 截圖
+
+![AT.field macOS AI 終端控制台與 Sidecar Markdown 預覽](01-app-eula-markdown-sidecar.png)
+
 現在很多工程師已經開始用 **Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** — 但它們都面臨同一個問題。
 
 核心概念很簡單：
@@ -122,10 +126,6 @@ AT.field 把 SSH 和 Serial 都當成同一級的 session 來管理。
 它不是 IDE replacement。更像是：
 
 **iTerm2 + tmux + Preview + SSH Manager + MCP Gateway + AI Agent Inspector** — 融合後的 macOS 原生產品。
-
-## 截圖
-
-![AT.field macOS AI 終端控制台與 Sidecar Markdown 預覽](01-app-eula-markdown-sidecar.png)
 
 ## 真正的核心：Sidecar 設計
 

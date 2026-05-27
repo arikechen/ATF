@@ -10,6 +10,10 @@ It's not a traditional terminal. It's not another Electron IDE.
 
 Keywords: macOS AI terminal, Claude Code terminal, Codex CLI GUI, AI CLI cockpit, terminal with file preview, SSH manager, Serial port terminal, UART console, localhost preview, Git diff viewer, MCP server, AI agent workflow.
 
+## Screenshot
+
+![AT.field macOS AI terminal cockpit with Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
+
 Many engineers are already using **Claude Code, Codex CLI, aider, OpenHands, Antigravity, Gemini CLI** — but they all face the same problem.
 
 The core idea is simple:
@@ -124,10 +128,6 @@ This is **not an IDE replacement.**
 Think of it more like:
 
 **iTerm2 + tmux + Preview + SSH Manager + MCP Gateway + AI Agent Inspector** — fused into one macOS-native product.
-
-## Screenshot
-
-![AT.field macOS AI terminal cockpit with Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
 
 ## The Real Core: Sidecar Design
 

@@ -10,6 +10,10 @@
 
 キーワード：macOS AI terminal、Claude Code terminal、Codex CLI GUI、AI CLI cockpit、file preview 付き terminal、SSH manager、Serial port terminal、UART console、localhost preview、Git diff viewer、MCP server、AI agent workflow。
 
+## スクリーンショット
+
+![AT.field macOS AI terminal cockpit と Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
+
 多くのエンジニアがすでに **Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** を使っています — しかし、すべて同じ問題に直面しています。
 
 核心はシンプルです：
@@ -124,10 +128,6 @@ AT.field は SSH と Serial を同じレベルの session として扱います�
 むしろ次のようなイメージです：
 
 **iTerm2 + tmux + Preview + SSH Manager + MCP Gateway + AI Agent Inspector** — を融合した macOS ネイティブプロダクト。
-
-## スクリーンショット
-
-![AT.field macOS AI terminal cockpit と Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
 
 ## 本当の核心：Sidecar デザイン
 
