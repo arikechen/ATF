@@ -8,8 +8,6 @@
 
 **AT.field は、Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview、AI Agent ワークフローを統合する macOS ネイティブ AI terminal cockpit です。**
 
-キーワード：macOS AI terminal、Claude Code terminal、Codex CLI GUI、AI CLI cockpit、file preview 付き terminal、SSH manager、Serial port terminal、UART console、localhost preview、Git diff viewer、MCP server、AI agent workflow。
-
 ## スクリーンショット
 
 ![AT.field macOS AI terminal cockpit と Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
@@ -118,7 +116,7 @@ AT.field は SSH と Serial を同じレベルの session として扱います�
 | **アーキテクチャ** | SwiftUI + AppKit（macOSネイティブ） | Electron（Chromium） |
 | **UI エンジン** | macOS ネイティブ | Chromium |
 | **起動速度** | < 0.1秒（コールド） | 1.5秒 ~ 4.0秒 |
-| **メモリ** | ~40-80 MB ベース | 200-500+ MB ベース |
+| **メモリ** | ~80-100 MB ベース | 200-500+ MB ベース |
 | **核心ポジション** | AI Terminal Cockpit | IDE |
 | **AI の役割** | 外部Agentオーケストレーション | IDE内蔵機能 |
 | **操作の中心** | Terminal-first | GUI-first |
@@ -145,89 +143,18 @@ AT.field は SSH と Serial を同じレベルの session として扱います�
 
 これは AI Agent 時代のワークフローに完全に適合します：AI がターミナルで実行し、人間がビジュアルレイヤーで監督・承認・修正します。**本当に危険なのは、AI が変更を加えても観察層がないことです** — AT.field がその観察層を提供します。
 
-### このプロジェクトが本当に優れている点
-
-1. **Sidecar が真のコアイノベーション** — terminal-first ワークフローを壊さずに可視化を導入
-2. **AI CLI 強化** — AI の変更を即座にレビュー：diff 確認、ファイル内容検査、セッション追跡。「完全自動化」より重要なのは **監査層があること**
-3. **MCP Server** — AT.field は単なるターミナルではなく **AI ツール基盤**。AI は MCP を通じてセッション読み取り、SSH 管理、ファイル操作、監査情報へのアクセスが可能。これは **AI-native operating environment** の方向性
-4. **SSH + Serial の統合** — ほとんどのターミナルは SSH しか重視せず、シリアルを第一級機能として扱うものは稀。ハードウェア技術者は SSH と UART/tty/dev ボードの両方をよく使う — AT.field はそれらを統合する
-
 ## 機能
 
-### スリーペインコックピット（Navigator · Core · Sidecar）
-
-動的3ペインレイアウト。左（Navigator）と右（Sidecar）はショートカット一発で収納（`Cmd+0` / `Cmd+Opt+0`）。コアターミナルは常時表示。`Cmd+1/2/3` で各ペインにフォーカス。
-
-### Sidecar デュアルモード：Preview ↔ Edit
-
-ワンクリックで **Preview**（Markdownレンダリング、画像/動画/HTML/JSON/PDF）と **Edit**（40+言語シンタックスハイライト）を切替。ファイルを選んで即表示、その場で編集。
-
-### パスマジック（プランB）
-
-スマートRegexがターミナル出力内のファイルパス、画像、localhost URLを検出。**パスをクリック** — Sidecar が1秒未満でレンダリング。`npm run dev` を実行し、内蔵WebKitサンドボックスで即座にプレビュー。
-
-### AI CLI ビジュアル強化
-
-Claude Code、Codex、Antigravity — これらはすべて「盲目的」に実行されています。AT.field ではターミナルから AI CLI を dispatch し、Sidecar で diff、ファイル内容、セッション状態を視覚的にレビューできます。**AI が変更を加えても、あなたには観察層があります。**
-
-### SSH & Serial（統合接続ハブ）
-
-SSHホストとシリアルデバイス（`/dev/tty.*`）を一つのパネルで管理。システム `ssh` + ControlMaster多重化、MFA/SSO/踏み台対応、3層認証ルーティング。**タブ切替でバックグラウンド接続が切れることはありません。** 組込開発、ロボティクス、ホームラボ、インフラ作業に必須です。
-
-### 分割ターミナル
-
-`⌘D` で水平分割。各ペインは独立したPTYセッション。複数マシンの出力比較やコマンド並行実行が可能。
-
-### 分離＆ピン留め
-
-任意のタブをフローティングウィンドウとしてドラッグアウト。全Spaceの最前面にピン留め — SSH接続や長時間スクリプトが埋もれません。
-
-### Git 統合
-
-プロジェクトツリー + git diff を Sidecar にカラー表示。別のソース管理アプリは不要。
-
-### MCP Server
-
-内蔵 Unix Domain Socket JSON-RPC サーバー（`/tmp/atf-mcp.sock`）。NDJSONフレーミング、最大3同時接続。6つのToolkit（Bookmark、Session、SSH、SFTP、Audit）。3段階権限制御（t0 ReadOnly / t1 Write / t2 Sensitive）。Claude Desktop、Cursor 等のAI Client向け stdio リレー。
-
-### スマートドラッグ＆ドロップ
-
-ファイルをターミナルにドラッグ → セッションタイプに応じて自動ルーティング：ローカル（FileManager）、SSH（SCP→ZModem）、シリアル（ZModem）。既にカレントディレクトリにあるファイルは shell-escape パスを挿入。
-
-### CLI & URL Scheme
-
-`atf` CLI コマンド。`atfield://open`、`atfield://preview`、`atfield://diff` ディープリンク。
-
-### Finder サービス
-
-Finder右クリック「New AI Terminal Field Tab Here」「New AI Terminal Field Window Here」。
-
-## こんな人におすすめ
-
-**最適：**
-
-- **AI-heavy terminal developer** — Claude Code、Codex CLI、Agentワークフローを日常的に使う人
-- **macOS パワーユーザー** — iTerm2 ヘビーユーザー、tmux ユーザー、キーボード優先ワークフローの人
-- **Infra / Embedded / Robotics 開発者** — SSH、シリアル、分割ターミナル、常時表示フローティングが全て正しく設計されている
-
-**非推奨：**
-
-- **Windows / Linux ユーザー** — macOS ネイティブのみ、クロスプラットフォームの予定なし
-- **従来の GUI IDE ユーザー** — IntelliJ や Cursor GUI ワークフローに慣れている人には GUI-first ではない
-
-## 本当のポジショニング
-
-README の最も重要なフレーズ：**"Visualize the Future of AI"**
-
-これが目指しているのは AI IDE ではなく、**「AI 時代のヒューマンコントロールサーフェス（Human Control Surface）」** です。
-
-将来の開発ワークフローはこうなるでしょう：
-
-- **AI** がターミナルで実行
-- **人間** が監督、承認、修正
-- **UI** が AI の動作を可視化
-
-AT.field はまさにそれを構築しています。
+| 機能 | 内容 |
+|---|---|
+| **3ペインコックピット** | Navigator、terminal、Sidecar を一つのウィンドウで扱えます。 |
+| **Sidecar preview / edit** | Markdown、画像、動画、HTML、JSON、PDF を preview し、syntax highlighting 付きでソース編集できます。 |
+| **terminal output detection** | terminal output からファイルパス、localhost URL、画像、PDF、HTML、diff を検出し、Sidecar で開きます。 |
+| **SSH & Serial hub** | SSH host と Serial device（`/dev/tty.*`）を同じレベルの session として管理し、tab 切替でも背景接続を維持します。 |
+| **split / detach / pin** | terminal pane を分割し、tab をフローティングウィンドウ化して全 Spaces の上にピン留めできます。 |
+| **Git integration** | Sidecar でプロジェクトファイルと git diff を確認できます。 |
+| **MCP Server** | AI client と automation 向けの Unix Domain Socket JSON-RPC server を内蔵。 |
+| **Finder Services** | Finder のコンテキストメニューから AT.field tab / window を開けます。 |
 
 ## システム要件
 
@@ -243,6 +170,10 @@ AT.field はまさにそれを構築しています。
 ## ソースコード
 
 このリポジトリにはリリースバイナリのみが含まれています。ソースコードはプライベートリポジトリで管理されています。
+
+## キーワード
+
+macOS AI terminal、Claude Code terminal、Codex CLI GUI、AI CLI cockpit、file preview 付き terminal、SSH manager、Serial port terminal、UART console、localhost preview、Git diff viewer、MCP server、AI agent workflow。
 
 ## ライセンス
 
