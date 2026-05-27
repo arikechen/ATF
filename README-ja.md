@@ -12,17 +12,19 @@
 
 ![AT.field macOS AI terminal cockpit と Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
 
-多くのエンジニアがすでに **Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** を使っています — しかし、すべて同じ問題に直面しています。
+**Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** のような AI CLI は、日常的な開発ツールになりつつあります。ターミナル内でファイルを編集し、コマンドを実行し、レポートを生成し、localhost サービスを起動し、diff を出力できます。
 
-核心はシンプルです：
+問題は、その作業が終わったあとです。通常の CLI では、結果を確認するためにターミナルから離れる必要があります。
 
-- **AI CLI（Claude Code、Codex、Antigravity CLI）** が実行を担当
-- **人間** が Sidecar ビジュアルレイヤーを通じて監督・レビュー
-- **3ペインインターフェース** がファイルナビゲーション、メインターミナル、AI結果の可視化を同時管理
+AT.field は AI CLI を terminal で実行するワークフローを保ちつつ、その横に視覚的なレビュー層を追加します：
 
-AI CLI ツールの最大の痛点を解決します：**CLI が「盲目的」すぎる。**
+- **中央：** shell、AI CLI、SSH、Serial session を実行
+- **左側：** ファイル、プロジェクト、接続、session を閲覧
+- **右側 Sidecar：** ファイル、diff、Markdown、画像、PDF、localhost ページを preview
 
-AI は強力ですが、スクロールするテキストを見るしかできません。以下のことを素早く行えません：
+核心はシンプルです：**AI は terminal で実行し、人間は結果を視覚的にレビューします。**
+
+これは AI CLI ツールの最大の痛点を解決します：**CLI が「盲目的」すぎる。** AI は強力ですが、多くの場合スクロールするテキストを見るしかありません。以下のことを素早く行えません：
 
 - diff を見る
 - Markdown を表示する
@@ -31,7 +33,7 @@ AI は強力ですが、スクロールするテキストを見るしかでき�
 - git 変更を確認する
 - リモート機器の状態を確認する
 
-AT.field の答え：**terminal-first のワークフローを維持しつつ、視覚的な Sidecar を並置する。**
+AT.field の答え：**terminal-first のワークフローを維持しつつ、結果を同じウィンドウ内で見えるようにする。**
 
 ## なぜ純粋な CLI ワークフローだけでは足りないのか？
 

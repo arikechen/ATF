@@ -12,17 +12,19 @@ It's not a traditional terminal. It's not another Electron IDE.
 
 ![AT.field macOS AI terminal cockpit with Sidecar Markdown preview](01-app-eula-markdown-sidecar.png)
 
-Many engineers are already using **Claude Code, Codex CLI, aider, OpenHands, Antigravity, Gemini CLI** — but they all share one problem.
+AI CLI tools such as **Claude Code, Codex CLI, aider, OpenHands, Antigravity, and Gemini CLI** are becoming part of everyday development. They can edit files, run commands, generate reports, start local servers, and produce diffs directly from the terminal.
 
-Here's the core idea:
+The problem is what happens after they do the work: in a normal CLI, you still have to leave the terminal to inspect the result.
 
-- **AI CLI (Claude Code, Codex, Antigravity CLI)** runs the execution
-- **Humans** supervise and review through a visual Sidecar layer
-- **Three-pane interface** manages everything at once: file navigation, main terminal, AI result visualization
+AT.field keeps the AI CLI workflow in the terminal, but adds a visual review layer next to it:
 
-This is the answer to the biggest pain point in AI CLI tools today: **the CLI is too "blind."**
+- **Center:** run your shell, AI CLI, SSH, or Serial session
+- **Left:** browse files, projects, connections, and sessions
+- **Right Sidecar:** preview files, diffs, Markdown, images, PDFs, and localhost pages
 
-AI is powerful, but you're stuck watching scrolling text. You can't quickly:
+The core idea is simple: **AI executes in the terminal; humans review the result visually.**
+
+That addresses the biggest pain point in AI CLI tools today: **the CLI is too "blind."** AI is powerful, but you're often stuck watching scrolling text. You can't quickly:
 
 - See diffs
 - Render Markdown
@@ -31,7 +33,7 @@ AI is powerful, but you're stuck watching scrolling text. You can't quickly:
 - Check git changes
 - Monitor remote device status
 
-AT.field's take: **keep the terminal-first workflow, but add a visual Sidecar right next to it.**
+AT.field's take: **keep the terminal-first workflow, but make the results visible in the same window.**
 
 ## Why pure CLI workflows fall short
 

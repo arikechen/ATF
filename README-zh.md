@@ -12,17 +12,19 @@
 
 ![AT.field macOS AI 終端控制台與 Sidecar Markdown 預覽](01-app-eula-markdown-sidecar.png)
 
-現在很多工程師已經開始用 **Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** — 但它們都面臨同一個問題。
+**Claude Code、Codex CLI、aider、OpenHands、Antigravity、Gemini CLI** 這類 AI CLI 正在變成日常開發工具。它們可以在 terminal 裡改檔案、跑指令、產生報告、啟動 localhost 服務，也可以輸出 diff。
 
-核心概念很簡單：
+問題是，AI 做完事情之後，你通常還是得離開 terminal 才能檢查結果。
 
-- **AI CLI（Claude Code、Codex、Antigravity CLI）** 負責執行
-- **人類** 透過 Sidecar 視覺層做監督與審查
-- **三欄式介面** 同時管理：檔案導航、主終端、AI 結果可視化
+AT.field 保留 AI CLI 在 terminal 裡執行的工作流，但在旁邊加上一層視覺化審查介面：
 
-它解決的是目前 AI CLI 最大的痛點：**CLI 太「盲」。**
+- **中間：** 執行 shell、AI CLI、SSH 或 Serial session
+- **左側：** 瀏覽檔案、專案、連線與 session
+- **右側 Sidecar：** 預覽檔案、diff、Markdown、圖片、PDF 與 localhost 頁面
 
-AI 很強，但你只能看滾動文字，很難快速：
+核心概念很簡單：**AI 在 terminal 裡執行，人類用視覺方式審查結果。**
+
+這正是在解決目前 AI CLI 最大的痛點：**CLI 太「盲」。** AI 很強，但你常常只能看滾動文字，很難快速：
 
 - 看 diff
 - 看 Markdown
@@ -31,7 +33,7 @@ AI 很強，但你只能看滾動文字，很難快速：
 - 看 git 變更
 - 看遠端裝置狀態
 
-AT.field 的想法是：**保留 terminal-first 的工作流，但加入視覺化 Sidecar。**
+AT.field 的想法是：**保留 terminal-first 的工作流，但讓結果直接在同一個視窗裡可見。**
 
 ## 為什麼純 CLI 工作流不夠？
 
