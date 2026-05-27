@@ -1,6 +1,6 @@
 # AT.field — AI Terminal Field
 
-> **Expand your AT.field. Visualize the Future of AI.**
+> **展開你的 AT.field。看見 AI 工作流的未來。**
 
 ## AT.field 是什麼？
 

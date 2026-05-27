@@ -11,7 +11,7 @@
   "nav.menu_aria": "切換選單",
 
   "hero.badge": "Native macOS AI Terminal Cockpit",
-  "hero.title": "Expand your <span class=\"gradient-text\">AT.field</span>.<br>Visualize the Future of AI.",
+  "hero.title": "展開你的 <span class=\"gradient-text\">AT.field</span>。<br>看見 AI 工作流的未來。",
   "hero.subtitle": "AT.field 是原生 macOS AI 終端控制台，整合 Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview 與 AI Agent 工作流。當 AI 在終端裡改檔案、產生報告或啟動網頁時，你可以直接在右側 Sidecar 查看結果，不用一直切換 Finder、瀏覽器、Preview 或 VS Code。",
   "hero.download_btn": "下載 macOS 版 (DMG)",
   "hero.download_alert": "開始下載 AT.field.dmg (v40.0)...",
@@ -89,7 +89,7 @@
   "specs.row5.atf": "Apple Notarization 公證安全，完全本地運行",
   "specs.row5.electron": "各類第三方 Javascript 插件，安全性難以審核",
 
-  "footer.motto": "Expand your AT.field. Visualize the Future of AI.",
+  "footer.motto": "展開你的 AT.field。看見 AI 工作流的未來。",
   "footer.copyright": "© 2026 AT.field. All rights reserved. macOS, Swift, and SwiftUI are trademarks of Apple Inc.",
   "footer.legal_title": "合約條款",
   "footer.legal.eula": "使用者授權合約 (EULA)",

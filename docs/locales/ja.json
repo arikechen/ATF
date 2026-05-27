@@ -11,7 +11,7 @@
   "nav.menu_aria": "メニューを切り替え",
 
   "hero.badge": "Native macOS AI Terminal Cockpit",
-  "hero.title": "Expand your <span class=\"gradient-text\">AT.field</span>.<br>Visualize the Future of AI.",
+  "hero.title": "<span class=\"gradient-text\">AT.field</span> を広げる。<br>AI ワークフローの未来を可視化する。",
   "hero.subtitle": "AT.field は、Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview、AI Agent ワークフローを統合する macOS ネイティブ AI terminal cockpit です。AI agent が terminal でファイルを変更したり、レポートを生成したり、Web アプリを起動したりしたとき、その結果を右側の Sidecar で確認できます。",
   "hero.download_btn": "macOS版をダウンロード (DMG)",
   "hero.download_alert": "AT.field.dmg (v40.0) のダウンロードを開始しています...",
@@ -89,7 +89,7 @@
   "specs.row5.atf": "Apple Notarization 公証済み、完全ローカル動作",
   "specs.row5.electron": "サードパーティJSプラグイン、監査が困難",
 
-  "footer.motto": "Expand your AT.field. Visualize the Future of AI.",
+  "footer.motto": "AT.field を広げる。AI ワークフローの未来を可視化する。",
   "footer.copyright": "© 2026 AT.field. All rights reserved. macOS, Swift, and SwiftUI are trademarks of Apple Inc.",
   "footer.legal_title": "法的情報",
   "footer.legal.eula": "使用許諾契約書 (EULA)",
