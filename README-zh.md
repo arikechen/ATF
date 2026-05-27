@@ -8,8 +8,6 @@
 
 **AT.field 是原生 macOS AI 終端控制台，整合 Claude Code、Codex CLI、Gemini CLI、aider、SSH、Serial port、Git diff、localhost preview 與 AI Agent 工作流。**
 
-關鍵字：macOS AI 終端機、Claude Code 終端控制台、Codex CLI 圖形介面、AI CLI 工作流、SSH 管理、Serial port 終端、UART console、localhost 預覽、Git diff 檢視、MCP Server、AI Agent workflow。
-
 ## 截圖
 
 ![AT.field macOS AI 終端控制台與 Sidecar Markdown 預覽](01-app-eula-markdown-sidecar.png)
@@ -118,7 +116,7 @@ AT.field 把 SSH 和 Serial 都當成同一級的 session 來管理。
 | **技術架構** | SwiftUI + AppKit（macOS 原生） | Electron（Chromium） |
 | **UI 引擎** | macOS 原生 | Chromium |
 | **啟動速度** | < 0.1 秒（冷啟動） | 1.5 秒 ~ 4.0 秒 |
-| **記憶體** | ~40-80 MB 基準 | 200-500+ MB 基準 |
+| **記憶體** | ~80-100 MB 基準 | 200-500+ MB 基準 |
 | **核心定位** | AI Terminal Cockpit | IDE |
 | **AI 角色** | 外部 Agent 調度 | IDE 內建功能 |
 | **操作核心** | Terminal-first | GUI-first |
@@ -143,83 +141,18 @@ AT.field 把 SSH 和 Serial 都當成同一級的 session 來管理。
 
 這很符合 AI Agent 時代的工作方式：AI 在終端裡執行，人類透過視覺層監督、授權、修正。**真正危險的是 AI 改了東西，但你沒有觀察層** — AT.field 給你這個觀察層。
 
-### 這個專案真正厲害的地方
-
-1. **Sidecar 是真正的核心創新** — 在不破壞 terminal-first 工作流的前提下引入視覺化
-2. **AI CLI 強化** — 你可以即時審查 AI 修改、看 diff、看檔案內容、追蹤 session 結果。比「全自動化」更重要的是：**你有審計層**
-3. **MCP Server** — AT.field 不只是 terminal，它還是 **AI 工具基礎設施**。AI 可以透過 MCP 讀取 session、管理 SSH、操作檔案、存取 audit 資訊。這方向其實很像 **AI-native operating environment**
-4. **SSH + Serial 一起整合** — 大部分 terminal 只重視 SSH，很少把 serial 當一級功能。做硬體的人常常同時用 SSH 和 UART/tty/dev board — AT.field 把它們整合進同一個工作流
-
 ## 功能特色
 
-### 三欄駕駛艙（Navigator · Core · Sidecar）
-
-動態三欄佈局。左領（Navigator）與右領（Sidecar）支援快捷鍵一鍵收合（`Cmd+0` / `Cmd+Opt+0`），核心終端區常駐。`Cmd+1/2/3` 切換各欄焦點。開發盡在一窗。
-
-### Sidecar 雙模式：Preview ↔ Edit
-
-一鍵切換 **Preview**（Markdown 渲染、圖片/影片/HTML/JSON/PDF）與 **Edit**（40+ 語言語法高亮）。選取檔案立刻看、立刻改。
-
-### 路徑魔法（方案 B）
-
-智慧 Regex 偵測終端輸出中的檔案路徑、圖片和 URL。**點擊任何路徑** — Sidecar 在 1 秒內渲染。執行 `npm run dev`，內建 WebKit 沙箱即時預覽。
-
-### AI CLI 視覺增強
-
-Claude Code、Codex、Antigravity — 它們都在「盲跑」。AT.field 讓你從終端調度 AI CLI，然後在 Sidecar 視覺化審查 diff、檔案內容、session 狀態。**AI 改了東西，你有觀察層。**
-
-### SSH & Serial（統一連線中心）
-
-管理 SSH 主機與 Serial 設備（`/dev/tty.*`）。系統 `ssh` + ControlMaster 多工、MFA/SSO/跳板機、三層認證路由。**切換 Tab 絕不中斷**背景連線。嵌入式、機器人、Homelab、Infra 必備。
-
-### 分割終端機
-
-`⌘D` 水平分割。每個 Pane 獨立 PTY session。對照多台機器輸出、並排執行不同指令。
-
-### 獨立浮動視窗
-
-將任意 Tab 拖出成浮動視窗，釘在全部 Space 最上層 — SSH 連線和長時間腳本永不遺失。
-
-### Git 整合
-
-專案樹 + git diff 直接送入 Sidecar 彩色預覽。不用切換 Source Control app。
-
-### MCP Server
-
-內建 Unix Domain Socket JSON-RPC Server（`/tmp/atf-mcp.sock`）。NDJSON 框架，最多 3 同步連線。6 個 Toolkits（Bookmark、Session、SSH、SFTP、Audit）。三級權限管控（t0 ReadOnly / t1 Write / t2 Sensitive）。Claude Desktop、Cursor 等 AI Client stdio relay。
-
-### 智慧拖放
-
-拖檔到終端自動選擇通道：本機 `FileManager`、SSH（SCP→ZModem fallback）、Serial（ZModem）。若已在當前目錄則插入 shell-escape 路徑。
-
-### CLI & URL Scheme
-
-`atf` CLI 指令。`atfield://open`、`atfield://preview`、`atfield://diff` 深度連結。
-
-### Finder 服務
-
-Finder 右鍵「New AI Terminal Field Tab Here」與「New AI Terminal Field Window Here」。
-
-## 適合誰？
-
-**非常適合：**
-
-- **AI-heavy terminal developer** — 天天用 Claude Code、Codex CLI、Agent workflow，你應該會很喜歡它
-- **macOS power user** — iTerm2 重度使用者、tmux 使用者、keyboard-first workflow 玩家
-- **Infra / Embedded / Robotics 開發者** — SSH、serial、split terminal、always-on floating terminal 都做得很對味
-
-**不適合：**
-
-- **Windows / Linux 使用者** — 完全是 macOS native，沒有跨平台方向
-- **傳統 GUI IDE 使用者** — 習慣 IntelliJ、VSCode GUI workflow 的話，它不是 GUI-first 工具
-
-## 真正的定位
-
-README 最關鍵的一句話：**"Visualize the Future of AI"**
-
-它想做的不是 AI IDE，而是 **「AI 時代的人類控制台（Human Control Surface）」**。
-
-未來開發流程很可能會變成：AI 在 terminal 裡執行 → 人類負責監督、授權、修正 → UI 負責把 AI 行為可視化。AT.field 正在做這件事。
+| 功能 | 說明 |
+|---|---|
+| **三欄式控制台** | Navigator、terminal、Sidecar 在同一個視窗中協作。 |
+| **Sidecar 預覽 / 編輯** | 預覽 Markdown、圖片、影片、HTML、JSON、PDF，也能編輯原始碼並支援語法高亮。 |
+| **終端輸出偵測** | 從 terminal output 偵測檔案路徑、localhost URL、圖片、PDF、HTML、diff，並在 Sidecar 開啟。 |
+| **SSH & Serial 中心** | 將 SSH host 與 Serial device（`/dev/tty.*`）當成同一級 session 管理，切換 tab 不會中斷背景連線。 |
+| **分割 / 浮動 / 釘選** | 分割 terminal pane、將 tab 拖出成浮動視窗，並釘在所有 Spaces 上方。 |
+| **Git 整合** | 在 Sidecar 中查看專案檔案與 git diff。 |
+| **MCP Server** | 內建 Unix Domain Socket JSON-RPC server，供 AI client 與 automation 使用。 |
+| **Finder 服務** | 從 Finder 右鍵直接開啟 AT.field tab 或 window。 |
 
 ## 系統需求
 
@@ -235,6 +168,10 @@ README 最關鍵的一句話：**"Visualize the Future of AI"**
 ## 原始碼
 
 本倉庫僅包含 Release 二進位檔，原始碼維護於私有倉庫。
+
+## 關鍵字
+
+macOS AI 終端機、Claude Code 終端機、Codex CLI GUI、AI CLI 控制台、具有檔案預覽的終端機、SSH 管理器、串列終端機、UART 控制台、本地主機預覽、Git diff 檢視器、MCP 伺服器、AI 代理程式工作流程。
 
 ## 授權
 
